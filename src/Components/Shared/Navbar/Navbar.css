@@ -1,0 +1,23 @@
+.main-menuBar{
+    background-color: #ff8f00;
+    box-shadow: 0 5px 10px #adadad;
+}
+.main-menuBrand{
+    color: whitesmoke;
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+.main-menuBrand:hover{
+    color: whitesmoke;
+   
+}
+.main-menuItem a{
+    color: whitesmoke;
+}
+
+.main-menuToggle-icon{
+    background-color: whitesmoke;
+    border-radius: 50%;
+    border: 1px solid whitesmoke;
+   
+}
