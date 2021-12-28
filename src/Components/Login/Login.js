@@ -1,9 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from '../Shared/Navbar/Navbar'
 import Footer from '../Shared/Footer/Footer'
 
 
 const Login = () => {
+
+    const [loginData, setLoginData] = useState({})
+
+    const handleOnChange = e =>{
+
+        const field = e.target.name 
+        const value = e.target.value 
+        const newLoginData = { ...loginData }
+        newLoginData[field] = value 
+        setLoginData(newLoginData)
+}
+
+
+    const handleLoginSubmit = e =>{
+        
+        e.preventDefault()
+    }
     return (
         <div>
             <Navbar></Navbar>
@@ -22,22 +39,22 @@ const Login = () => {
                                     <p className='mt-2'>Or</p>
 
 
-                                     <form className='mt-3'>
+                                     <form className='mt-3'  onSubmit={handleLoginSubmit}>
                                     <div className="form-group">
                                         
-                                        <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
+                                        <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"  name="email" onChange={handleOnChange} />
                                         
                                     </div>
                                     <div className="form-group">
                                        
-                                        <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" />
+                                        <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" name="password" onChange={handleOnChange}/>
                                     </div>
                                 
                                     <button type="submit" className="btn btn-warning btn-sm">Sign in</button>
                                     </form>
 
 
-                                    
+
                                     <p>Are you new here? <a href="/home" className='text-danger'>Create Account</a></p>
                                 </div>
                         </div>
