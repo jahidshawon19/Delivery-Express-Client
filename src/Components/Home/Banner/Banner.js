@@ -10,7 +10,7 @@ const Banner = () => {
                     <h1 className='banner-title font-weight-bold'>On-demand national courier service <br />
                         at your <span className='text-warning'>doorstep</span>
                     </h1>
-                    <button className='btn btn-danger text-light'>Order Place</button>
+                    <button className='btn btn-warning text-light'>Order Place</button>
                 </div>
                 <div className="col-sm-6">
                     <img src={bannerImage} className='img-fluid mt-3 banner-img' alt="" />
