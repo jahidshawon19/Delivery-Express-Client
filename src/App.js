@@ -9,6 +9,7 @@ import {
 } from "react-router-dom"
 import Login from './Components/Login/Login';
 import NotFound from './Components/NotFound/NotFound';
+import Register from './Components/Register/Register';
 
 function App() {
   return (
@@ -22,6 +23,10 @@ function App() {
 
           <Route path = "/home">
           <Home></Home>
+          </Route>
+
+          <Route path = "/register">
+          <Register></Register>
           </Route>
 
 

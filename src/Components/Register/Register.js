@@ -3,28 +3,34 @@ import Navbar from '../Shared/Navbar/Navbar'
 import Footer from '../Shared/Footer/Footer'
 import { Link } from 'react-router-dom';
 
+const Register = () => {
 
-const Login = () => {
-
-    const [loginData, setLoginData] = useState({})
+    const [registerData, setRegisterData] = useState({})
 
     const handleOnChange = e =>{
 
         const field = e.target.name 
         const value = e.target.value 
-        const newLoginData = { ...loginData }
-        newLoginData[field] = value 
-        setLoginData(newLoginData)
+        const newRegisterData = { ...registerData }
+        newRegisterData[field] = value 
+        setRegisterData(newRegisterData)
+       
 }
 
 
-    const handleLoginSubmit = e =>{
-        
+
+    const handleRegisterSubmit = e =>{
+        if(registerData.password !== registerData.password2){
+            alert('Password Did Not Match')
+            return 
+        }
         e.preventDefault()
     }
+
+    
     return (
         <div>
-            <Navbar></Navbar>
+ <Navbar></Navbar>
             <div className="container">
                 <div className="row py-5 mt-5">
                     <div className="col-sm-4"></div>
@@ -32,7 +38,7 @@ const Login = () => {
                          <div className="card">
                                 <div className="card-body">
                                     <h3 className='font-weight-bold text-left'>Welcome</h3>
-                                    <p className="text-left">Sign up or log in to continue</p>
+                                    <p className="text-left">Create Account</p>
 
 
 
@@ -40,7 +46,7 @@ const Login = () => {
                                     <p className='mt-2'>Or</p>
 
 
-                                     <form className='mt-3'  onSubmit={handleLoginSubmit}>
+                                     <form className='mt-3'  onSubmit={handleRegisterSubmit}>
                                     <div className="form-group">
                                         
                                         <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"  name="email" onChange={handleOnChange} />
@@ -50,13 +56,18 @@ const Login = () => {
                                        
                                         <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" name="password" onChange={handleOnChange}/>
                                     </div>
+
+                                    <div className="form-group">
+                                       
+                                       <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Confirm Password" name="password2" onChange={handleOnChange}/>
+                                   </div>
                                 
-                                    <button type="submit" className="btn btn-warning btn-sm">Sign in</button>
+                                    <button type="submit" className="btn btn-warning btn-sm">Sign up</button>
                                     </form>
 
 
 
-                                    <p>Are you new here? <Link to="/register" className='text-danger' style={{textDecoration:"none"}}>Create Account</Link></p>
+                                    <p>Already Registered? <Link to="/login" className='text-danger' style={{textDecoration:"none"}}>Sign in</Link></p>
                                 </div>
                         </div>
                     </div>
@@ -69,4 +80,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Register;

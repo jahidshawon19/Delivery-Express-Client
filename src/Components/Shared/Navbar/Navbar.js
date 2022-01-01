@@ -23,7 +23,7 @@ const Navbar = () => {
                         <a className="nav-link" href="#">About</a>
                     </li>
                     <li className="main-menuItem nav-item">
-                        <Link className=" btn btn-outline-warning btn-sm mt-2" to="/login">Sign In</Link>
+                        <Link className=" btn btn-danger btn-sm mt-2" to="/login">Sign In</Link>
                     </li>
                 </ul>
             </div>
