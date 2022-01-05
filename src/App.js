@@ -10,11 +10,13 @@ import {
 import Login from './Components/Login/Login';
 import NotFound from './Components/NotFound/NotFound';
 import Register from './Components/Register/Register';
+import AuthProvider from './context/AuthProvider/AuthProvider'
 
 function App() {
   return (
     <div className="App">
-      <Router>
+     <AuthProvider>
+     <Router>
         <Switch>
 
           <Route exact path = "/">
@@ -41,6 +43,7 @@ function App() {
 
         </Switch>
       </Router>
+     </AuthProvider>
     </div>
   );
 }
