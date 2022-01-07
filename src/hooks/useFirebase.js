@@ -7,34 +7,36 @@ const { useState, useEffect } = require("react")
 initializeFirebase()   // initializze firebase app 
 const useFirebase = () =>{
     const [user, setUser] = useState({})
-
+    const [loading, setLoading] = useState(true) // by default set it true
+    const [authError, setAuthError] = useState('')
     const auth = getAuth()
 
     const registerUser = (email, password) =>{
+        setLoading(true)
         createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
-           
-            const user = userCredential.user;
+            setAuthError('')
            
           })
           .catch((error) => {
-            
-            const errorMessage = error.message;
+            setAuthError(error.message);
            
-          });
+          })
+          .finally(()=> setLoading(false));
     }
 
     const logInUser = (email, password) =>{
+        setLoading(true)
         signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
-          // Signed in 
-          const user = userCredential.user;
-          // ...
+         
+          setAuthError('')
+         
         })
         .catch((error) => {
-          const errorCode = error.code;
-          const errorMessage = error.message;
-        });
+          setAuthError(error.message);
+        })
+        .finally(()=> setLoading(false));
     }
 
     const logOutUser = () =>{
@@ -56,6 +58,7 @@ const useFirebase = () =>{
             } else {
                 setUser({})
             }
+            setLoading(false)
           });
           return ()=>  unSubscribe
     }, [])
@@ -63,6 +66,8 @@ const useFirebase = () =>{
 
     return {
         user,
+        loading,
+        authError,
         registerUser, 
         logInUser,
         logOutUser

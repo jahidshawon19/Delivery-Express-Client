@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import Navbar from '../Shared/Navbar/Navbar'
 import Footer from '../Shared/Footer/Footer'
 import { Link } from 'react-router-dom';
-
+import useAuth from '../../hooks/useAuth';
 
 const Login = () => {
 
     const [loginData, setLoginData] = useState({})
+    const {user, logInUser, loading, authError} = useAuth()
 
     const handleOnChange = e =>{
 
@@ -19,7 +20,7 @@ const Login = () => {
 
 
     const handleLoginSubmit = e =>{
-        
+        logInUser(loginData.email, loginData.password)
         e.preventDefault()
     }
     return (
@@ -40,7 +41,7 @@ const Login = () => {
                                     <p className='mt-2'>Or</p>
 
 
-                                     <form className='mt-3'  onSubmit={handleLoginSubmit}>
+                                    { !loading &&  <form className='mt-3'  onSubmit={handleLoginSubmit}>
                                     <div className="form-group">
                                         
                                         <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"  name="email" onChange={handleOnChange} />
@@ -52,7 +53,14 @@ const Login = () => {
                                     </div>
                                 
                                     <button type="submit" className="btn btn-warning btn-sm">Sign in</button>
-                                    </form>
+                                    </form>}
+                                    {
+                                        user?.email &&  <div classsName="alert alert-info" role="alert">Login Successfully</div>
+                                    }
+
+                                    {
+                                        authError && <div classsName="alert alert-danger" role="alert">{authError}</div>
+                                    }
 
 
 

@@ -12,6 +12,7 @@ import NotFound from './Components/NotFound/NotFound';
 import Register from './Components/Register/Register';
 import AuthProvider from './context/AuthProvider/AuthProvider'
 
+
 function App() {
   return (
     <div className="App">
