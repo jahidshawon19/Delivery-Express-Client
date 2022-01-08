@@ -70,11 +70,11 @@ const Register = () => {
                                     </form>}
 
                                     {
-                                        user?.email &&  <div classsName="alert alert-info" role="alert">Thank you for creating your account</div>
+                                        user?.email &&  <div className="alert alert-info" role="alert">Thank you for creating your account</div>
                                     }
 
                                     {
-                                        authError && <div classsName="alert alert-danger" role="alert">{authError}</div>
+                                        authError && <div className="alert alert-danger" role="alert">{authError}</div>
                                     }
 
 

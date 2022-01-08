@@ -3,11 +3,15 @@ import Navbar from '../Shared/Navbar/Navbar'
 import Footer from '../Shared/Footer/Footer'
 import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
+import { useLocation } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 const Login = () => {
 
     const [loginData, setLoginData] = useState({})
     const {user, logInUser, loading, authError} = useAuth()
+    const location = useLocation()
+    const history = useHistory()
 
     const handleOnChange = e =>{
 
@@ -20,7 +24,7 @@ const Login = () => {
 
 
     const handleLoginSubmit = e =>{
-        logInUser(loginData.email, loginData.password)
+        logInUser(loginData.email, loginData.password, location, history)
         e.preventDefault()
     }
     return (
@@ -55,11 +59,11 @@ const Login = () => {
                                     <button type="submit" className="btn btn-warning btn-sm">Sign in</button>
                                     </form>}
                                     {
-                                        user?.email &&  <div classsName="alert alert-info" role="alert">Login Successfully</div>
+                                        user?.email &&  <div className="alert alert-info" role="alert">Login Successfully</div>
                                     }
 
                                     {
-                                        authError && <div classsName="alert alert-danger" role="alert">{authError}</div>
+                                        authError && <div className="alert alert-danger" role="alert">{authError}</div>
                                     }
 
 

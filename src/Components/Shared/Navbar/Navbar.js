@@ -23,6 +23,8 @@ const Navbar = () => {
                     </li>
                     <li className="main-menuItem nav-item">
                         <a className="nav-link" href="#">About</a>
+
+
                     </li>
                     {
                         user.email?

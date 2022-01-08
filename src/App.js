@@ -11,6 +11,8 @@ import Login from './Components/Login/Login';
 import NotFound from './Components/NotFound/NotFound';
 import Register from './Components/Register/Register';
 import AuthProvider from './context/AuthProvider/AuthProvider'
+import Booking from './Components/Booking/Booking';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 
 
 function App() {
@@ -27,6 +29,10 @@ function App() {
           <Route path = "/home">
           <Home></Home>
           </Route>
+
+          <PrivateRoute path = "/booking">
+            <Booking></Booking>
+          </PrivateRoute>
 
           <Route path = "/register">
           <Register></Register>
