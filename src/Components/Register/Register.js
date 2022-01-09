@@ -3,13 +3,14 @@ import Navbar from '../Shared/Navbar/Navbar'
 import Footer from '../Shared/Footer/Footer'
 import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
+import { useHistory } from 'react-router-dom';
 
 const Register = () => {
 
     const [registerData, setRegisterData] = useState({})
 
     const {user,registerUser, loading, authError} = useAuth()
-
+    const history = useHistory()
     const handleOnChange = e =>{
 
         const field = e.target.name 
@@ -27,7 +28,7 @@ const Register = () => {
             alert('Password Did Not Match')
             return 
         }
-        registerUser(registerData.email, registerData.password)
+        registerUser(registerData.email, registerData.password, registerData.name, history)
         e.preventDefault()
     }
 
@@ -51,6 +52,11 @@ const Register = () => {
 
 
                                      { !loading && <form className='mt-3'  onSubmit={handleRegisterSubmit}>
+                                     <div className="form-group">
+                                        
+                                        <input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Full Name"  name="name" onChange={handleOnChange} />
+                                        
+                                    </div>
                                     <div className="form-group">
                                         
                                         <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"  name="email" onChange={handleOnChange} />
