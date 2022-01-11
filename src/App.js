@@ -13,6 +13,7 @@ import Register from './Components/Register/Register';
 import AuthProvider from './context/AuthProvider/AuthProvider'
 import Booking from './Components/Booking/Booking';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import Dashboard from './Components/Admin/Dashboard/Dashboard';
 
 
 function App() {
@@ -32,6 +33,10 @@ function App() {
 
           <PrivateRoute path = "/booking">
             <Booking></Booking>
+          </PrivateRoute>
+
+          <PrivateRoute path= "/dashboard">
+            <Dashboard></Dashboard>
           </PrivateRoute>
 
           <Route path = "/register">

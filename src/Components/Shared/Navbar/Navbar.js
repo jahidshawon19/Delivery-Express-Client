@@ -28,9 +28,14 @@ const Navbar = () => {
                     </li>
                     {
                         user.email?
+                        <>
+                         <li className="main-menuItem nav-item">
+                        <Link  className='nav-link' to="/dashboard">Dashboard</Link>
+                        </li>
                         <li className="main-menuItem nav-item">
                         <Link onClick={logOutUser} className=" btn btn-danger btn-sm mt-2" to="/login">Log Out</Link>
                         </li>
+                        </>
                         :
                         <li className="main-menuItem nav-item">
                         <Link className=" btn btn-danger btn-sm mt-2" to="/login">Sign In</Link>
