@@ -18,6 +18,9 @@ const useFirebase = () =>{
             setAuthError('')
             const newUser = {email, displayName: name}
             setUser(newUser)
+            //save user to the database 
+            saveUserDatabase(email, name)
+
             updateProfile(auth.currentUser, {
               displayName:name 
             }).then(()=>{
@@ -61,6 +64,19 @@ const useFirebase = () =>{
         })
     }
 
+
+    // save user to the database 
+    const saveUserDatabase = (email, displayName) =>{
+        const user = {email, displayName}
+        fetch('http://localhost:5000/users', {
+          method:'POST',
+          headers: {
+            'content-type':'application/json'
+          },
+          body:JSON.stringify(user)
+        })
+        .then()
+    }
     // observer user state
 
     useEffect(()=>{

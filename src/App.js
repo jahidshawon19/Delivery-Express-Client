@@ -14,6 +14,7 @@ import AuthProvider from './context/AuthProvider/AuthProvider'
 import Booking from './Components/Booking/Booking';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import Dashboard from './Components/Admin/Dashboard/Dashboard';
+import AllUsers from './Components/Admin/AllUsers/AllUsers';
 
 
 function App() {
@@ -37,6 +38,10 @@ function App() {
 
           <PrivateRoute path= "/dashboard">
             <Dashboard></Dashboard>
+          </PrivateRoute>
+
+          <PrivateRoute path="/allusers">
+            <AllUsers></AllUsers>
           </PrivateRoute>
 
           <Route path = "/register">
