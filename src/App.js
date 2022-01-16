@@ -15,6 +15,8 @@ import Booking from './Components/Booking/Booking';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import Dashboard from './Components/Admin/Dashboard/Dashboard';
 import AllUsers from './Components/Admin/AllUsers/AllUsers';
+import MakeAdmin from './Components/Admin/MakeAdmin/MakeAdmin';
+import AdminRoute from './Components/AdminRoute/AdminRoute';
 
 
 function App() {
@@ -40,9 +42,13 @@ function App() {
             <Dashboard></Dashboard>
           </PrivateRoute>
 
-          <PrivateRoute path="/allusers">
+          <AdminRoute path="/allusers">
             <AllUsers></AllUsers>
-          </PrivateRoute>
+          </AdminRoute>
+
+          <AdminRoute path="/makeadmin">
+            <MakeAdmin></MakeAdmin>
+          </AdminRoute>
 
           <Route path = "/register">
           <Register></Register>

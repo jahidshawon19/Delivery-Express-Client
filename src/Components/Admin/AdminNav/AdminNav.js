@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import useAuth from '../../../hooks/useAuth.js'
 
 const AdminNav = () => {
+    const {admin} = useAuth()
     return (
         <>
                   <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -15,20 +17,29 @@ const AdminNav = () => {
                     <li className="nav-item active">
                         <Link className="nav-link" to="/">Visit Site</Link>
                     </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="#">Add New Service</a>
-                    </li>
 
-                    <li className="nav-item">
-                        <a className="nav-link" href="#">Service List</a>
-                    </li>
-
-                    <li className="nav-item">
+                    {admin && <>
+                        <li className="nav-item">
                         <a className="nav-link" href="#">All Bookings</a>
-                    </li>
-                    <li className="nav-item">
+                        </li>
+                        <li className="nav-item">
+                        <a className="nav-link" href="#">Add New Service</a>
+                        </li>
+                        <li className="nav-item">
+                        <a className="nav-link" href="#">Service List</a>
+                        </li> 
+                        <li className="nav-item">
                         <Link className="nav-link" to="/allusers">All Users</Link>
-                    </li>
+                         </li> 
+                         <li className="nav-item">
+                        <Link className="nav-link" to="/makeadmin">Make Admin</Link>
+                         </li>
+                        </>}
+                    
+                    
+
+                    
+                
                     
                     </ul>
 
