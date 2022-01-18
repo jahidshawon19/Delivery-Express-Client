@@ -19,6 +19,9 @@ import MakeAdmin from './Components/Admin/MakeAdmin/MakeAdmin';
 import AdminRoute from './Components/AdminRoute/AdminRoute';
 import AddService from './Components/Admin/AddService/AddService';
 import ServiceDetails from './Components/ServiceDetails/ServiceDetails';
+import AllBookings from './Components/Admin/AllBookings/AllBookings';
+import BookingDetails from './Components/Admin/BookingDetails/BookingDetails';
+import AllService from './Components/Admin/AllService/AllService';
 
 
 function App() {
@@ -44,6 +47,7 @@ function App() {
             <Booking></Booking>
           </PrivateRoute>
 
+
           <PrivateRoute path= "/dashboard">
             <Dashboard></Dashboard>
           </PrivateRoute>
@@ -52,12 +56,23 @@ function App() {
             <AllUsers></AllUsers>
           </AdminRoute>
 
+          <AdminRoute path="/allbookings">
+            <AllBookings></AllBookings>
+          </AdminRoute>
+          <AdminRoute path="/booking_details/:bookingId">
+              <BookingDetails></BookingDetails>
+          </AdminRoute>
+
           <AdminRoute path="/makeadmin">
             <MakeAdmin></MakeAdmin>
           </AdminRoute>
 
           <AdminRoute path="/addservice">
             <AddService></AddService>
+          </AdminRoute>
+
+          <AdminRoute path="/allservices">
+            <AllService></AllService>
           </AdminRoute>
 
           <Route path = "/register">

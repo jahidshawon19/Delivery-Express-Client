@@ -33,7 +33,7 @@ const AddService = () => {
         <>
         <AdminNav></AdminNav>
         <div className="container">
-            <h3 className='text-center font-weight-bold py-3'>Add Service</h3>
+            <h2 className='text-center text-secondary font-weight-bold mt-5'>Add New Service</h2>
             <div className="row mt-5">
             <div className="col-lg-4"></div>
             <div className="col-lg-4">

@@ -20,13 +20,13 @@ const AdminNav = () => {
 
                     {admin && <>
                         <li className="nav-item">
-                        <a className="nav-link" href="#">All Bookings</a>
+                        <Link className="nav-link" to="/allbookings">All Bookings</Link>
                         </li>
                         <li className="nav-item">
                         <Link className="nav-link" to="/addservice">Add New Service</Link>
                         </li>
                         <li className="nav-item">
-                        <a className="nav-link" href="#">Service List</a>
+                        <Link className="nav-link" to="/allservices">Service List</Link>
                         </li> 
                         <li className="nav-item">
                         <Link className="nav-link" to="/allusers">All Users</Link>

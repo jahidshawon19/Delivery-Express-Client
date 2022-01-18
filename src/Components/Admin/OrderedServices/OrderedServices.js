@@ -20,15 +20,15 @@ const OrderedServices = () => {
                 <div className="col-lg-3">
                 <div className="card bg-light">
                 <div className="card-body">
-                    <h6 className='font-weight-bold'>User Information</h6>
-                    <p><span className='text-info font-weight-bold'>Email:</span> {user.email}</p>
-                    <p><span className='text-info font-weight-bold'>Total Bookings:{bookings.length}</span></p>
+                   
+                    <p><span className='text-dark font-weight-bold'>User Email</span> {user.email}</p>
+                    <p><span className='text-danger font-weight-bold'>Total Bookings: {bookings.length}</span></p>
                 </div>
                 </div>
                 </div>
                 <div className="col-lg-9">
-                    <h3>Your Booking Summery</h3>
-                <table className="table table-primary">
+                <h2 className='text-center text-secondary font-weight-bold mt-5'>Booking Summary</h2>
+                <table className="table table-bordered">
                 <thead>
                     <tr>
                     <th scope="col">Pickup Place</th>

@@ -33,7 +33,7 @@ const MakeAdmin = () => {
                         <div className="col-lg-4">
                         <form onSubmit={handleAdminSubmit}>
                         <div className="form-group">
-                        <label>Make Admin</label>
+                        <h2 className='text-center text-secondary font-weight-bold mt-5'>Make Admin</h2>
                          <input type="email" class="form-control" onBlur={handleOnBlur} placeholder="Enter email" />
                          <button type="submit" className="btn btn-primary mt-2">Submit</button>
                          </div>
