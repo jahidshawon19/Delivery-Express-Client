@@ -1,32 +1,32 @@
 
-    <h1>Delivery Express</h1>
-    <h5>Online Shipping Service Website</h5>
+    # Delivery Express
+    ## Online Shipping Service Website
 
-    <h3>Features</h3>
-    <ul>
-        <li>Home page contains header, banner, mainoffering sections</li>
-        <li>There is a Booking page where only registered users can visit it</li>
-        <li>Redirect Target page when user log in</li>
-        <li>Dashboard option is visible in the menubar when the user get registered</li>
-        <li>Admin can manage all bookings, add new service, manage service</li>
-        <li>Set user email on booking form default when user log in</li>
-        <li>Load bookings from API based on user email in admin panel</li>
-        <li>Save registered user's information in the database</li>
-        <li>Make Admin system(only admin can do it)</li>
-        <li>Load all bookings and all services in Admin Panel</li>
-    </ul>
+    ### Features
 
-    <h3>Tools and Technology</h3>
-    <ul>
-        <li>React JS</li>
-        <li>React Router</li>
-        <li>Node/Express</li>
-        <li>Firebase Authentication</li>
-        <li>MongoDB</li>
-        <li>Bootstrap</li>
-        <li>HTML/CSS</li>
-    </ul>
+       Home page contains header, banner, mainoffering sections 
+        - There is a Booking page where only registered users can visit it 
+        - Redirect Target page when user log in 
+        - Dashboard option is visible in the menubar when the user get registered 
+        - Admin can manage all bookings, add new service, manage service 
+        - Set user email on booking form default when user log in 
+        - Load bookings from API based on user email in admin panel 
+        - Save registered user's information in the database 
+        - Make Admin system(only admin can do it) 
+        - Load all bookings and all services in Admin Panel 
 
-    <p>Live Site: </p>
-    <p>Client Site Code: </p>
-    <p>Server Site Code: </p>
+
+    ### Tools and Technology
+   
+        - React JS 
+        - React Router 
+        - Node/Express 
+        - Firebase Authentication 
+        - MongoDB 
+        - Bootstrap 
+        - HTML/CSS 
+
+
+    Live Site:
+    Client Site Code: https://github.com/jahidshawon19/Delivery-Express-Client
+    Server Site Code: https://github.com/jahidshawon19/Delivery-Express-Server
