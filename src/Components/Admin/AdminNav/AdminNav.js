@@ -23,7 +23,7 @@ const AdminNav = () => {
                         <a className="nav-link" href="#">All Bookings</a>
                         </li>
                         <li className="nav-item">
-                        <a className="nav-link" href="#">Add New Service</a>
+                        <Link className="nav-link" to="/addservice">Add New Service</Link>
                         </li>
                         <li className="nav-item">
                         <a className="nav-link" href="#">Service List</a>

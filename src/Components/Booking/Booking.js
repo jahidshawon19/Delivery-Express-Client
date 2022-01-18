@@ -1,10 +1,15 @@
-import React, { useRef  } from 'react';
+import React, { useEffect, useRef, useState  } from 'react';
+import { useParams } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import Footer from '../Shared/Footer/Footer';
 import Navbar from '../Shared/Navbar/Navbar';
 import './Booking.css'
 const Booking = () => {
     const {user} = useAuth()
+  
+
+
+
    
 
     const senderNameRef = useRef()
@@ -274,7 +279,7 @@ const Booking = () => {
                                <label className="order-form-label">Parcel Type</label>
                              </div>
                              <div className="col-12 ">
-                               <input className="order-form-input"  ref={parcelTypeRef} />
+                               <input className="order-form-input"  ref={parcelTypeRef}  />
                              </div>
                             
                            </div>

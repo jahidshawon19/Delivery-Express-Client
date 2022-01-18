@@ -58,7 +58,7 @@
     font-weight: bold;
 }
 
-.service-card .info a{
+.service-card .info Link{
     margin-top: 12px;
     padding: 0.5rem 1rem;
     font-size: 14px;

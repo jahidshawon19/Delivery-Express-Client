@@ -17,6 +17,8 @@ import Dashboard from './Components/Admin/Dashboard/Dashboard';
 import AllUsers from './Components/Admin/AllUsers/AllUsers';
 import MakeAdmin from './Components/Admin/MakeAdmin/MakeAdmin';
 import AdminRoute from './Components/AdminRoute/AdminRoute';
+import AddService from './Components/Admin/AddService/AddService';
+import ServiceDetails from './Components/ServiceDetails/ServiceDetails';
 
 
 function App() {
@@ -34,6 +36,10 @@ function App() {
           <Home></Home>
           </Route>
 
+          <PrivateRoute path="/service/:serviceId">
+            <ServiceDetails></ServiceDetails>
+          </PrivateRoute>
+
           <PrivateRoute path = "/booking">
             <Booking></Booking>
           </PrivateRoute>
@@ -48,6 +54,10 @@ function App() {
 
           <AdminRoute path="/makeadmin">
             <MakeAdmin></MakeAdmin>
+          </AdminRoute>
+
+          <AdminRoute path="/addservice">
+            <AddService></AddService>
           </AdminRoute>
 
           <Route path = "/register">
