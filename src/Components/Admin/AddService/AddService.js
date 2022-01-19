@@ -13,7 +13,7 @@ const AddService = () => {
 
         const newService = {serviceName, shortDescription, photoUrl}
 
-        fetch('http://localhost:5000/addservices', {
+        fetch('https://powerful-badlands-74288.herokuapp.com/addservices', {
             method: 'POST',
             headers:{
                 'content-type': 'application/json'

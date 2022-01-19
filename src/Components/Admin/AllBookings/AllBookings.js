@@ -6,7 +6,7 @@ const AllBookings = () => {
     const [allbookings, setAllBookings] = useState([])
 
     useEffect(()=>{
-        fetch('http://localhost:5000/allbookings')
+        fetch('https://powerful-badlands-74288.herokuapp.com/allbookings')
         .then(res => res.json())
         .then(data => setAllBookings(data))
     }, [])

@@ -5,7 +5,7 @@ const AllUsers = () => {
     const [allUsers, setAllUsers] = useState([])
 
     useEffect( ()=>{
-        fetch('http://localhost:5000/users')
+        fetch('https://powerful-badlands-74288.herokuapp.com/users')
         .then(res => res.json())
         .then(data => setAllUsers(data))
     }, [])

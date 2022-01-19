@@ -58,7 +58,7 @@ const Booking = () => {
       const newBooking = {senderName, senderEmail, senderMobile, senderAddress, pickupPlace, date, recipientName, recipientMobile,recipientEmail, recipientDistrict, destination,parcelType, parcelContain,amount}
 
       
-      fetch('http://localhost:5000/bookings', {
+      fetch('https://powerful-badlands-74288.herokuapp.com/bookings', {
           method: 'POST',
           headers:{
             'content-type': 'application/json'

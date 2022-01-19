@@ -29,6 +29,6 @@
 - HTML/CSS 
 
 
-### Live Site:
+### Live Site: https://delex.netlify.app/
 - Client Site Code: https://github.com/jahidshawon19/Delivery-Express-Client
 - Server Site Code: https://github.com/jahidshawon19/Delivery-Express-Server

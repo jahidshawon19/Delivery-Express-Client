@@ -7,7 +7,7 @@ const OrderedServices = () => {
     const [bookings, setBookings] = useState([])
     
     useEffect( ()=>{
-        const url = `http://localhost:5000/bookings?email=${user.email}`
+        const url = `https://powerful-badlands-74288.herokuapp.com/bookings?email=${user.email}`
         fetch(url)
         .then(res => res.json())
         .then(data => setBookings(data))
