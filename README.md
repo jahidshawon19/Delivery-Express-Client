@@ -32,3 +32,8 @@
 ### Live Site: https://delex.netlify.app/
 - Client Site Code: https://github.com/jahidshawon19/Delivery-Express-Client
 - Server Site Code: https://github.com/jahidshawon19/Delivery-Express-Server
+
+
+### Admin Credential
+- email: jahid@de.com 
+- password: 123456
